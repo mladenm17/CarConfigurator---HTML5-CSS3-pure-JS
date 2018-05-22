@@ -1,0 +1,685 @@
+.reset{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:gainsboro;
+}
+.clearfix{
+    clear: both;
+}
+.container-fluid{
+    background-color: white;
+    height: 1000px;
+}
+.page-header{  
+    margin-top: 20px;
+    height: auto;
+    overflow: auto;
+    width: 100%;
+    border-bottom:1px solid black;
+}
+.headerBackground{
+    width: 120px;
+    float: left;
+    text-align: left;
+}
+.gillSans{
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 100;
+    color: black;
+    font-size: 90px;
+}
+h1{
+    line-height: 112px !important;
+}
+.label{
+    text-align: center;
+    font-size: 18px;
+}
+.labelClasses{
+    text-align: center;
+    font-size: 18px;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 100;
+    color: black;
+}
+#bodiesList{
+    list-style: none;
+    visibility: hidden;
+}
+.mercedesLogo{
+    background: url("../Images/mercedesTransparentLogo.png") no-repeat center center;
+    border-radius: 4px;
+    /*filter: drop-shadow(55px 55px 5px #222);*/
+    background-size: 550px; 
+    animation: rotation 5s infinite linear;
+    height: 420px;
+    width: 420px;
+    margin: 80px auto 0px auto;
+}
+@keyframes rotation {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(359deg);
+    }
+}
+.mercedesClaim{
+    margin-top: 60px;
+    text-align: center;
+    font-size: 30px;
+}
+#classes{
+    width: 700px;
+}
+#openMenu{
+    font-size:40px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: fixed;
+    color: white;
+    top:45%;
+    height: 10%;
+    background-color: rgb(41, 40, 40);;
+    z-index: 1;
+    padding-top: 18px;
+}
+#closeMenu{
+    transition: 0.5s;
+    font-size:40px;
+    top:45%;
+    height: 10%;
+    cursor: pointer;
+    color: white;
+    position: fixed;
+    visibility: hidden;
+    background-color: rgb(41, 40, 40);;
+    z-index: 1;
+    padding-top: 18px;
+}
+.sideNav{
+    height: 30%;
+    top: 35%;
+    width: 10px;
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(41, 40, 40);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.sideNav li{
+    padding: 13px 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+@media (max-width: 1275px) {   
+    .sideNav{
+        width: 10px !important; 
+    } 
+    #openMenu{
+        margin-left: 0px !important;
+        visibility: visible !important;
+    } 
+    #closeMenu{
+        margin-left: 0px !important;
+        visibility: hidden !important;
+    }
+    #bodiesList{
+        visibility: hidden !important;
+    }    
+}
+@media (max-height:790px){
+    #openMenu{
+        padding-top: 10px; 
+    } 
+    #closeMenu{
+        padding-top: 10px; 
+    } 
+}
+@media (max-height:746px){
+    #openMenu{
+        padding-top: 8px; 
+    } 
+    #closeMenu{
+        padding-top: 8px; 
+    } 
+}
+@media (max-height:700px){
+    #openMenu{
+        padding-top: 4px; 
+    } 
+    #closeMenu{
+        padding-top: 4px; 
+    } 
+}
+@media (max-height:655px){
+    #openMenu{
+        padding-top: 2px; 
+    } 
+    #closeMenu{
+        padding-top: 2px; 
+    } 
+}
+@media (max-height:600px){
+    #openMenu{
+        padding-top: 0px; 
+    } 
+    #closeMenu{
+        padding-top: 0px; 
+    } 
+}
+@media (max-height:550px){
+    #openMenu{
+       line-height:  50px; 
+    } 
+    #closeMenu{
+        line-height: 50px; 
+    } 
+}
+@media (max-height:490px){
+    #openMenu{
+        line-height:  44px; 
+    } 
+    #closeMenu{
+        line-height:  44px; 
+    } 
+}
+@media (max-height:400px){
+    #openMenu{
+        line-height:  36px; 
+    } 
+    #closeMenu{
+        line-height: 36px; 
+    } 
+}
+@media (max-height:300px){
+    #openMenu{
+        line-height:  24px; 
+    } 
+    #closeMenu{
+        line-height:  24px; 
+    } 
+}
+@media (max-height: 618px) {
+    .sideNav li{
+        font-size: 14px;    
+        padding: 3px 0px;
+        }
+}
+@media (max-height: 400px) {
+    .sideNav li{
+        font-size: 10px;    
+        padding: 1px 0px;
+        } 
+}
+
+.sideNav li:hover{
+    color: #f1f1f1;
+    cursor: pointer;
+    background-color: gray;
+}
+#tilesListContent{
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+   
+}
+.tile{
+    float: left;
+    width: 270px;
+    height: 200px;
+    background-color: white;
+    margin: 40px 35px 0px 0px;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+.className{
+    margin-top: 150px;
+    text-align: center;
+    font-size: 25px;
+}
+.overlay{
+    overflow: hidden;
+	opacity: 0;
+    position: absolute;
+    width: 270px;
+    height: 200px;
+    transition: opacity 0.5s ease-in 0s;
+    margin-top: -190px;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.txtLayover{
+    position: absolute;
+    opacity: 0;
+    margin: -120px 0px 0px 37px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.tile:hover .overlay{  
+    opacity: 0.7; 
+    transition: 1s;
+    background-color:black;
+}
+.tile:hover .txtLayover{  
+    opacity: 1; 
+    cursor: pointer; 
+    transition: 1s;
+    z-index: 1;
+}
+.classDetailsBottom{
+    margin: 0 auto;
+    bottom: 0;
+    width: 1300px;
+    height: 0px;
+    position: fixed;
+    background-color: rgb(41, 40, 40);
+    transition: 1s;
+    overflow: hidden;
+    z-index: 2;
+    color: lightblue;
+}
+#wheelsList{
+    list-style-type: none; 
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+}
+#wheelsList li{
+    width: 101px;
+    height: 100px;
+    float: left;
+}
+#modelsList{
+    width: 100%;
+    height: 300px;
+    list-style-type: none;
+    border-top: 1px solid white;
+    padding: 0px;
+}
+.modelItem{
+    float: left;
+    color: white;
+    width: 185.7px;
+    text-align: center;
+    margin-top: 10px;
+}
+.modelItem:hover{
+    cursor: pointer;
+    background-color: gray;
+    color: lightblue;
+}
+h4{
+    padding-left: 37px;
+}
+#minimize{
+    margin-top: -35px;
+    float: right;
+    text-align: right;
+    padding-right: 15px;
+    cursor: pointer;
+}
+#modelConfig{
+    width: 100%;
+    height: 758px;
+    background-size: 465px 250px;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: none;
+    position: relative;
+    margin: 0 auto;
+}
+.vehicleExteriorImg{
+    width: 1041px;
+    height: 544px;
+    position: absolute;
+    margin: -124px 0px 0px 100px;
+}
+#modelPrice{
+    
+    /* margin: 50px 345px 0px 0px;
+    float: right; */
+}
+.configuratorForm{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    height: 305px;
+    margin-top: -155px;
+}
+.carColor{
+    overflow: auto;
+    width: 100%;
+    height: 47px;   
+}
+.colorSelector:hover{
+    cursor: pointer;
+}
+.specEquipment{
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+   
+}
+#btnRadioPaints{
+    margin-top: 3px;
+}
+#chckboxSpecEquipment{
+    margin-top: 3px;
+}
+.configurationTilesWheels{
+    width: 101px;
+    height: 100px;
+    float: left;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.configurationTilesEquipment{
+    width: 212px;
+    height: 192px;
+    float: left;
+    text-align: center;
+    margin-right: 30px;
+}
+.configurationTilesWheels:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+.configurationTilesWheels:active{
+    background-color: lightgray;
+}
+.colorLabels{
+    line-height: 19px;
+    font-size: 15px; 
+    margin: -38px 0px 3px 0px;
+    color: white;    
+}
+.tireSize{
+    text-align: center;
+    bottom: 0;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+.priceInfo{
+    margin: 0 auto;
+    width: 0px;
+    height: 0%; 
+    position: relative;
+    background-color: rgb(41, 40, 40);
+    overflow: hidden;
+    z-index: 2;
+    color: lightblue;
+    top: 330px;
+    padding: 0px 0px 0px 5px;
+    font-size: 14px;
+    transition: 1s;
+    display: table;
+}
+.priceText{
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+}
+.equipmentDescription{
+    width: 204px;
+    padding-left: 5px;
+}
+.equipmentNameText{
+    font-size: 14px;
+    float: left;
+    text-align: left;
+    width: 155px;
+    letter-spacing: 0px;
+}
+.equipmentPriceText{
+    float: right;
+    font-size: 12px;
+
+}
+@media (max-width: 1275px) {    
+    .priceInfo{
+        width: 10px !important;
+    }
+} 
+#builtPrice{
+    text-align: left;
+    font-size: 14px;
+}
+.btnOrder{
+    color: white;
+    background-color: rgb(41, 40, 40);
+    border-radius: 4px;
+    padding: 6px 67px;
+    text-decoration: none !important;
+    font-size: 14px;
+}
+.btnOrder:hover{
+    cursor: pointer;
+    color: white !important;;
+}
+.finishedOrder{
+    width: 100%;
+    height: 224px;
+    position: relative;
+    display: none;
+}
+.technicalInfo{
+    width: 280px;
+    height: 147px;
+    position: relative;
+    border-left: 0.5px solid black;
+    float: right;
+    margin-top: 53px;
+    font-size: 12px;
+    padding-left: 5px;
+}
+.orderDetailsTable{
+    margin-bottom: 40px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.tableLeft{
+    width: 45%;
+    float: left;
+    margin-right: 42px;
+}
+.tableRight{
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+    height: 211px;
+    display: table;
+}
+.tableRightWrapper{
+    display: table-cell;
+    vertical-align: middle;
+}
+td, th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+.overlayPopUp{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    display: none;
+    opacity: 0;
+    z-index: 3;
+}
+.popup{
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 45%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+.show{
+    display: block;
+    opacity: 1;
+}
+.popup h2{
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close{
+    position: absolute;
+    top: -4px;
+    right: 5px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover{
+    color: black;
+}
+.popup .content{
+    max-height: 70%;
+    overflow: auto;
+}
+@media screen and (max-width: 700px){
+.box{
+    width: 70%;
+    }
+.popup{
+     width: 70%;
+    }
+}
+#choosedComponent{
+    padding: 10px 0px;
+    font-weight: bold;
+}
+#addedComponents{
+    padding: 10px 0px;
+    font-weight: bold;
+    display: none;
+}
+#removedComponents{
+    padding: 10px 0px;
+    font-weight: bold;
+    display: none;
+}
+.popupComponentHeading{
+    font-size: 18px;
+    margin: 0px;
+}
+.popupComponents{
+    font-size: 13px;
+    font-weight: normal;
+    display: table;
+}
+.popupComponents:before {
+    content: "\25CF";
+    padding-left: 15px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 10px;
+    padding-right: 6px;
+}
+.popupComponentsPrice{
+    float: right;
+    font-size: 14px;
+    font-weight: normal;
+    padding-right: 24px;
+    margin-top: -36px;
+}
+.addedComponentsTotalPrice{
+    font-weight: bold;
+    float: right;
+    padding-right: 24px;
+}
+.btnCancel{
+    color: white;
+    background-color:lightslategray;
+    border-radius: 4px;
+    padding: 6px 67px;
+    text-decoration: none !important;
+    font-size: 14px;
+    margin-right: 20px;
+}
+.btnConfirm{
+    color: white;
+    background-color: rgb(41, 40, 40);
+    border-radius: 4px;
+    padding: 6px 67px;
+    text-decoration: none !important;
+    font-size: 14px;
+}
+.btnCancel:hover, .btnConfirm:hover{
+    cursor: pointer;
+}
+.ms-Dialog-title{
+    padding: 3px 24px !important;
+    background-color: rgb(192,192,192) !important;
+}
+.ms-Button.ms-Button--primary {
+    background-color: rgb(192,192,192) !important;
+    border-color: rgb(192,192,192) !important;
+}
+.ms-Dialog{
+    overflow: auto !important;
+    max-height: 70% !important;
+    max-width: 600px !important;
+    min-width: 600px !important;
+}
+.ms-Dialog-subText {
+    font-size: 14px !important;
+}
+#priceInfoPopUp{
+    background: lightyellow;
+    margin-top: 50px;
+    padding: 12px 19px;
+}
+.hiddenTireName{
+    display: none;
+}
+.totalPriceStrong{
+    font-size: 20px;
+}
+.ms-Overlay{
+    background-color: black !important;
+    opacity: 0.8 !important;
+    z-index: 3 !important;
+}
+.shortSpecList{
+    list-style-type: none;
+}
+.shortSpecListElement{
+    width: 180px;
+    float: left;
+    text-align: left;
+    line-height: 30px;
+}
+
+

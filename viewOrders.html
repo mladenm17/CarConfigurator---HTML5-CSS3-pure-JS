@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Orders</title>
+        <link href="Css/viewOrders.css" type="text/css" rel="stylesheet"/>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="loadMenu()">
+        <div class="flex-container">
+            <header class="page-header">
+                <a href="index.html"><img class="headerBackground" src="Images/mercedesTransparentLogo.png"/></a>
+                <h1 class="gillSans">View orders</h1>
+                <div class="clearfix"></div> 
+            </header>
+            <nav class="menu">
+                <ul class="menuList" id="menuList">                  
+                </ul>
+            </nav>
+            <div class="grid" id="grid">          
+            </div>    
+            <div class="finishedOrder" id="finishedOrder">          
+            </div>    
+            <!-- <button type="button" class="btnOrder" onclick="resetOrders()">Reset orders</button>  -->
+        </div>
+        <script src="Scripts/script.js"></script>
+    </body>
+</html>

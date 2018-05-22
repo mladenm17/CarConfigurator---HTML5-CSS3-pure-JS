@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <title>Car generator</title>
+    <link href="Css/order.css" type="text/css" rel="stylesheet"/>
+    <link href="Css/animate.css" type="text/css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fabrik -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.min.css" />
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.components.min.css" />
+    <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/js/fabric.min.js"></script>
+    <!-- fabrik -->
+  </head>
+  <body class="reset" onload="loadBodies()">
+    <div class="container-fluid">
+      <header class="page-header">
+        <a href="index.html"><img class="headerBackground" src="Images/mercedesTransparentLogo.png"/></a>
+        <h1 class="gillSans text-center">Configure your car</h1>
+        <div class="clearfix"></div> 
+      </header>
+      <div class="clearfix"></div>           
+      <div class="row">   
+        <div class="col-sm-2">                 
+          <span id="openMenu" onclick="openNav()">&#129094;</span>
+          <span id="closeMenu" onclick="closeNav()">&#129092;</span>          
+          <nav id="bodiesSidenav" class="sideNav">               
+            <ul onclick="loadClasses()" class="nav navbar-nav" id="bodiesList">
+            </ul>
+          </nav> 
+          <div class="clearfix"></div>                
+        </div>               
+        <div class="col-sm-8" id="middleRow">
+          <div id="welcomePageContent">
+            <h1 class="gillSans text-center">Welcome</h1>
+            <div class="mercedesLogo">         
+            </div>
+            <p class="mercedesClaim">Mercedes-Benz</p>
+            <div class="clearfix"></div>   
+          </div>  
+          <div id="tilesListContent">
+          </div> 
+          <div class="modelConfig" id="modelConfig">
+            <img class="vehicleExteriorImg" id="vehicleExteriorImg"/>
+            <div class="clearfix"></div>   
+            <div class="technicalInfo" id="technicalInfo"></div>
+            <div class="clearfix"></div>   
+            <form class="configuratorForm" id="configuratorForm">   
+                <h2>Color</h2>       
+              <div class="carColor" id="carColor">
+                <select class="colorSelector" id="colorSelector" onchange="addColorToConfiguration()">            
+                </select>                                 
+              </div><div class="clearfix"></div>     
+                <h2>Wheels</h2>
+                <ul id="wheelsList">         
+                </ul><div class="clearfix"></div>   
+              <h2>Special equipment</h2>    
+              <div class="specEquipment" id="specEquipment">                                                                
+              </div>
+              <div class="clearfix"></div>       
+              <div id="popup1" class="overlayPopUp">
+                <div class="popup">
+                  <div class="content" id="content">
+                    <h2>Confirm selection</h2>
+                    <hr>
+                    <div id="choosedComponent">
+                      <h3 class="popupComponentHeading">You choosed:</h3> 
+                      <hr>                
+                    </div>
+                    <div id="addedComponents">
+                        <h3 class="popupComponentHeading">Also must be added:</h3>
+                        <hr>
+                    </div>
+                    <div id="removedComponents">
+                      <h3 class="popupComponentHeading">Also must be removed:</h3>
+                      <hr>
+                    </div>
+                    <hr> 
+                    <a class="close" onclick="closePopUp()">&times;</a> 
+                    <div class="popupFooter">
+                        <button class="btnCancel" type="button" onclick="closePopUpAndUncheckChkBox()">Cancel</button>
+                        <button class="btnConfirm" type="button" onclick="confirmOrder()">Confirm</button>   
+                    </div>            
+                  </div>           
+                  <!-- <button type="button" onclick="saveConfiguration()">Finish</button> -->
+                </div>
+              </div> 
+              <div class="docs-DialogExample-lgHeader">
+                  <div class="ms-Dialog ms-Dialog--lgHeader">
+                    <div class="ms-Dialog-title">Order summary: </div>
+                    <div class="ms-Dialog-content" id="ms-Dialog-content" >
+                        <div id="selectedColor">
+                          <h3 class="popupComponentHeading">Selected color:</h3>
+                          <hr>
+                        </div>
+                        <div id="selectedWheel">
+                          <h3 class="popupComponentHeading">Selected wheel:</h3>
+                          <hr>
+                        </div> 
+                        <div id="selectedEquipment">
+                            <h3 class="popupComponentHeading">Selected equipment:</h3>
+                            <hr>
+                        </div>  
+                        <div id="priceInfoPopUp">                                   
+                        </div>  
+                    </div>
+                    <div class="ms-Dialog-actions">                   
+                      <button type="button" class="ms-Button ms-Dialog-action ms-Button--primary">
+                        <span class="ms-Button-label">Save</span> 
+                      </button>
+                      <button type="button" class="ms-Button ms-Dialog-action">
+                        <span class="ms-Button-label">Cancel</span> 
+                      </button>
+                    </div>
+                  </div>
+                  <button type="button" class="btnOrder docs-DialogExample-button">View Order</button>               
+              </div>     
+            </form>                   
+          </div> 
+          <div class="finishedOrder" id="finishedOrder">          
+          </div>          
+          <div class="clearfix"></div>
+          <div id="classDetailsBottom" class="classDetailsBottom">               
+             <h4>Select a model to build:</h4>
+             <p id="minimize" onclick="minimizeClassDetails()">_minimize</p>
+              <ul id="modelsList">                
+              </ul>            
+          </div>     
+        </div> 
+        <div class="col-sm-2">
+          <div class="priceInfo" id="priceInfo"> 
+            <p class="reset priceText" id="modelPrice"></p>         
+          </div>
+        </div> 
+      </div>   
+    </div>
+    <script src="Scripts/script.js"></script>
+  </body>
+</html>
+
+<!-- <script type="text/javascript">
+  ();
+</script> -->

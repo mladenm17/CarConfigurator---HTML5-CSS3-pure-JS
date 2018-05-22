@@ -1,0 +1,176 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.clearfix{
+    clear: both;
+}
+.flex-container {  
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.page-header{  
+    margin:20px 0px 10px 0px;
+    height: auto;
+    overflow: auto;
+    width: 100%;
+    border-bottom:1px solid black;
+    text-align: center;
+}
+.headerBackground{
+    width: 120px;
+    float: left;
+    text-align: left;
+}
+.gillSans{
+    font-family: "Gill Sans", sans-serif;
+    font-weight: 100;
+    color: black;
+    font-size: 90px;
+}
+h1{
+    line-height: 112px !important;
+    margin: 0px;
+}
+.menu{
+  background: #fff;
+  font-size: 12px;
+}
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+    display: flex;
+}
+.menuList li{
+   display: block;
+   flex: 1 0 auto;
+}
+.menu a{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    background: #333;
+}
+.menu a:hover{
+    background: gray;
+    cursor: pointer;
+}
+.grid{
+    margin: 0 auto;
+    height: auto;
+    width: 1400px;
+    text-align: center;
+}
+.flip-container{
+    width: 250px;
+    height: 250px;
+    margin:75px 75px auto auto;
+    display: inline-block;
+    perspective: 1000px;
+}
+.flip-container:hover .flipper, .flip-container.hover .flipper{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+.flip-container, .front, .back{
+    width: 250px;
+    height: 235px;
+}
+.flipper{
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.front, .back{
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+}
+.front{
+    display: table;
+    z-index: 2;
+    padding-top: 15px;
+}
+.tileText{
+    color: white;
+    font-size: 25px;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 40px;
+}
+.back{
+    display: table;
+    transform: rotateY(180deg);
+    background-color: gray;
+}
+.finishedOrder{
+    width: 80%;
+    height: 100%;
+    position: relative;
+    display: none;
+    margin: 35px auto;
+}
+.orderDetailsTable{
+    margin-bottom: 40px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.tableLeft{
+    width: 45%;
+    float: left;
+    margin-right: 42px;
+}
+.tableRight{
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+    height: 211px;
+    display: table;
+}
+.tableRightWrapper{
+    display: table-cell;
+    vertical-align: middle;
+}
+td, th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+.shortSpecList{
+    list-style-type: none;
+}
+.shortSpecListElement{
+    width: 180px;
+    float: left;
+    text-align: left;
+    line-height: 30px;
+}
+.btnOrder{
+    color: white;
+    background-color: rgb(41, 40, 40);
+    border-left: 0px; 
+    border-radius: 4px;
+    padding: 6px 67px;
+    text-decoration: none !important;
+    font-size: 14px;
+}
+.btnOrder:hover{
+    cursor: pointer;
+    color: white !important;;
+}
+
+
+
+
+
